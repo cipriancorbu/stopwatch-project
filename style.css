@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 2rem;
+}
+main {
+  max-width: 420px;
+}
+#time {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+button {
+  margin-right: .5rem;
+}
