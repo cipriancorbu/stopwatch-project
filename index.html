@@ -1,25 +1,43 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stopwatch by Ciprian</title>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <main>
-    <h1>Ciprian’s Stopwatch</h1>
-    <p>Last update: 20 November</p>
-    <p id="output">Hello, Ciprian!</p>
+<main>
+  <h1>Ciprian's Stopwatch</h1>
+  <p>Last update: 20 November</p>
+  <p id="output">Hello, Ciprian!</p>
 
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <button id="reset">Reset</button>
+  <!-- Butoane de schimbare mod -->
+  <div class="mode-switch">
+    <button id="mode-stopwatch" class="mode-button active">Stopwatch</button>
+    <button id="mode-timer" class="mode-button">Timer</button>
+  </div>
 
-    <div id="time">00:00</div>
-  </main>
+  <!-- MODUL STOPWATCH -->
+  <section id="stopwatch-mode" class="mode-panel">
+    <div class="button-row">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div id="stopwatch-display" class="time-display">00:00.00</div>
+  </section>
 
-  <script src="./script.js"></script>
-</body>
-</html>
+  <!-- MODUL TIMER -->
+  <section id="timer-mode" class="mode-panel hidden">
+    <div class="timer-inputs">
+      <label>
+        Minutes:
+        <input type="number" id="timer-minutes" min="0" value="0">
+      </label>
+      <label>
+        Seconds:
+        <input type="number" id="timer-seconds" min="0" max="59" value="30">
+      </label>
+    </div>
+
+    <div class="button-row">
+      <button id="timer-start">Start</button>
+      <button id="timer-stop">Stop</button>
+      <button id="timer-reset">Reset</button>
+    </div>
+
+    <div id="timer-display" class="time-display">00:00</div>
+  </section>
+</main>
